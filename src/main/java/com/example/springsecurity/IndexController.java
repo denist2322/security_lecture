@@ -30,6 +30,7 @@ public class IndexController {
         return "admin";
     }
 
+    // 시큐리티 로그인 페이지로 안가고 여기로 오도록 강제함.
     @GetMapping("/login")
     @ResponseBody
     public String login(){

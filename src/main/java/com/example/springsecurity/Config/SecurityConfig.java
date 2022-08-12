@@ -18,6 +18,9 @@ public class SecurityConfig {
                         .antMatchers("/manager/**")
                         .access("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')")
                         .anyRequest().permitAll())
+                .formLogin()
+                .loginPage("/login")
+                .and()
                 .build();
     }
 }
